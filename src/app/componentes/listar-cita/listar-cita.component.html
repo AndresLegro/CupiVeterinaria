@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="card">
+
+        <div class="card-header">
+            Lista de Citas
+        </div>
+    
+        <div class="card-body">
+            
+            <div class="table-responsive">
+    
+                <table class="table table">
+                    <thead>
+                        <br>
+                        <tr>
+                            <th scope="col">Fecha:</th>
+                            <th scope="col">Hora:</th>
+                            <th scope="col">Doctor:</th>
+                            <th scope="col">Estado:</th>
+                        </tr>
+    
+                    </thead>
+                    <tbody>
+    
+                        <tr *ngFor = "let cita of citas ; let iControl = index">
+                            <td scope="row">{{cita.fecha}}</td>
+                            <td>{{cita.hora}}</td>
+                            <td>{{cita.doctor}}</td>
+                            <td>{{cita.estado}}</td>
+                            <td>
+                                <a class="btn btn-warning" routerLink="/editar-cita/{{cita.id}}">Editar</a>&nbsp;
+                                <a class="btn btn-danger" (click)="borrarCita(cita.id, iControl)" role="button">Eliminar</a>
+                            </td>                              
+                        </tr>
+    
+                    </tbody>
+                </table>
+            </div>
+            <a class="btn btn-info" routerLink="/agregar-cita" >Agregar una nueva Cita</a>
+     
+        </div>
+    </div>
+    
+</div>
+
+

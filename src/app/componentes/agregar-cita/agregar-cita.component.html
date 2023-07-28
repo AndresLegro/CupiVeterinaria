@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Agendar una Cita
+        </div>
+        <div class="card-body">
+            <form (ngSubmit) = "enviarDatos()" [formGroup] = "formularioDeCitas">
+                
+                <label for="opciones">Selecciona una o varias opciones:</label>
+                <select  id="opciones" name="opciones" formControlName="idMascota">
+                    <option *ngFor = "let mascota of mascotas" value="{{mascota.id}}" >{{mascota.nombre}}</option>
+                </select>
+
+                <br><br>
+
+                <label for="opciones">Selecciona una o varias opciones:</label>
+                <select   id="opciones" name="opciones" formControlName="idCliente">
+                    <option *ngFor = "let cliente of clientes" value="{{cliente.cedula}}" >{{cliente.nombreCompleto}}</option>
+                </select>
+                <br>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Fecha: </label>
+                    <input type="date" class="form-control" name="" id="" formControlName="fecha" aria-describedby="helpId" placeholder="">
+                </div>
+    
+                <div class="mb-3">
+                    <label for="" class="form-label">Hora: </label>
+                    <input type="time" class="form-control" name="" id="" formControlName="hora" aria-describedby="helpId" placeholder="">
+                </div>
+    
+                <div class="mb-3">
+                    <label for="" class="form-label">Tipo: </label>
+                    <input type="text" class="form-control" name="" id="" formControlName="tipo" aria-describedby="helpId" placeholder="">
+                </div>
+    
+                <div class="mb-3">
+                    <label for="" class="form-label">Doctor: </label>
+                    <input type="text" class="form-control" name="" id="" formControlName="doctor" aria-describedby="helpId" placeholder="">
+                </div>
+    
+                <div class="mb-3">
+                    <label for="" class="form-label">Motivo: </label>
+                    <input type="text" class="form-control" name="" id="" formControlName="motivo" aria-describedby="helpId" placeholder="">
+                </div>
+    
+                <div class="mb-3">
+                    <label for="" class="form-label">Sintomas: </label>
+                    <input type="text" class="form-control" name="" id="" formControlName="sintomas" aria-describedby="helpId" placeholder="">
+                </div>
+    
+                <button class="btn btn-success" type="submit">Agregar la cita</button> &nbsp;
+                <button class="btn btn-danger" type="button">Cancelar</button>
+    
+            </form>
+        </div>
+</div>
+
+    
+
+

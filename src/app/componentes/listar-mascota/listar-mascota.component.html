@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="card">
+
+        <div class="card-header">
+            Lista de Mascotas
+        </div>
+    
+        <div class="card-body">
+            
+            <div class="table-responsive">
+    
+                <table class="table table">
+                    <thead>
+                        <br>
+                        <tr>
+                            <th scope="col">Nombre:</th>
+                            <th scope="col">Raza:</th>
+                            <th scope="col">Especie:</th>
+                            <th scope="col">Genero:</th>
+                        </tr>
+    
+                    </thead>
+                    <tbody>
+    
+                        <tr *ngFor = "let mascota of mascotas ; let iControl = index">
+                            <td scope="row">{{mascota.nombre}}</td>
+                            <td>{{mascota.raza}}</td>
+                            <td>{{mascota.especie}}</td>
+                            <td>{{mascota.genero}}</td>
+                            <td>
+                                <a class="btn btn-warning" routerLink="/editar-mascota/{{mascota.id}}" class="btn btn-warning">Editar</a>&nbsp;
+                                <a class="btn btn-danger" (click)="borrarMascota(mascota.id , iControl)" role="button">Eliminar</a>
+                            </td>
+                        </tr>
+    
+                    </tbody>
+                </table>
+            </div>
+            <a class="btn btn-info" routerLink="/agregar-mascota" >Agregar una nueva mascota</a>
+     
+        </div>
+    </div>
+    
+</div>
+
+
+
+

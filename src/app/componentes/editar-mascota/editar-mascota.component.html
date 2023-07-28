@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Editar una Mascota
+        </div>
+        <div class="card-body">
+            <form (ngSubmit) = "enviarDatos()" [formGroup] = "formularioDeMascotas">
+    
+                <div class="mb-3">
+                    <label for="" class="form-label">Nombre: </label>
+                    <input type="text" class="form-control" name="" id="" formControlName="nombre" aria-describedby="helpId" placeholder="">
+                </div>
+    
+                <div class="mb-3">
+                    <label for="" class="form-label">Especie: </label>
+                    <input type="text" class="form-control" name="" id="" formControlName="especie" aria-describedby="helpId" placeholder="">
+                </div>
+    
+                <div class="mb-3">
+                    <label for="" class="form-label">Raza: </label>
+                    <input type="text" class="form-control" name="" id="" formControlName="raza" aria-describedby="helpId" placeholder="">
+                </div>
+    
+                <div class="mb-3">
+                    <label for="" class="form-label">Edad: </label>
+                    <input type="number" class="form-control" name="" id="" formControlName="edad" aria-describedby="helpId" placeholder="">
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Genero: </label>
+                    <input type="text" class="form-control" name="" id="" formControlName="genero" aria-describedby="helpId" placeholder="">
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Peso: </label>
+                    <input type="number" class="form-control" name="" id="" formControlName="peso" aria-describedby="helpId" placeholder="">
+                </div>
+    
+                <button class="btn btn-success" type="submit">Editar la mascota</button> &nbsp;
+                <button class="btn btn-danger"  routerLink="/listar-cita" type="button">Cancelar</button>
+    
+            </form>
+        </div>
+</div>
+
+    
+
+
+

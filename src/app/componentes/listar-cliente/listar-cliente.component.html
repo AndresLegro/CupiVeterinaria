@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="card">
+
+        <div class="card-header">
+            Lista de Clientes
+        </div>
+    
+        <div class="card-body">
+            
+            <div class="table-responsive">
+    
+                <table class="table table">
+                    <thead>
+                        <br>
+                        <tr>
+                            <th scope="col">Cedula:</th>
+                            <th scope="col">Nombre:</th>
+                            <th scope="col">Direccion:</th>
+                            <th scope="col">Correo:</th>
+                        </tr>
+    
+                    </thead>
+                    <tbody>
+    
+                        <tr *ngFor = "let cliente of clientes ; let iControl = index">
+                            <td scope="row">{{cliente.cedula}}</td>
+                            <td>{{cliente.nombreCompleto}}</td>
+                            <td>{{cliente.direccion}}</td>
+                            <td>{{cliente.correo}}</td>
+                            <td>
+                                <a class="btn btn-warning" routerLink="/editar-cliente/{{cliente.cedula}}" class="btn btn-warning">Editar</a>&nbsp;
+                                <a class="btn btn-danger" (click)="borrarCliente(cliente.cedula , iControl)" role="button">Eliminar</a>
+                            </td>
+                        </tr>
+    
+                    </tbody>
+                </table>
+            </div>
+            <a class="btn btn-info" routerLink="/agregar-cliente" >Agregar un nuevo Cliente</a>
+     
+        </div>
+    </div>
+    
+</div>
+
+
+

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Editar Cita
+        </div>
+        <div class="card-body">
+            <form (ngSubmit)="enviarDatos()" [formGroup]="formularioDeCitas">
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Selecciona una opción: </label>&nbsp;
+                    <select name="" id="" formControlName="estado" aria-describedby="helpId" placeholder="">
+                        <option value="Asignada">Asignada</option>
+                        <option value="En atencion">En atencion</option>
+                        <option value="Completada">Completada</option>
+                        <option value="Cancelada">Cancelada</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-success" type="submit">Editar</button> &nbsp;
+                <button class="btn btn-danger" routerLink="/listar-cita" type="button">Cancelar</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
